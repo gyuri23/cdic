@@ -6,11 +6,17 @@ Mentés script itt van:  /var/lib/backup/duplicity-backup.sh
 Időzítés megnézése:     crontab -l
 Időzítés szerkesztése:  crontab -e
 
-Mentések állapota:      duplicity collection-status rsync://username:password@192.168.x.x::/backup/folder
+Mentések állapota:      duplicity collection-status
+                        rsync://username:password@192.168.x.x::/backup/folder
 
-Keresés a mentésben:    duplicity list-current-files rsync://username:password@192.168.x.x::/backup/folder | egrep 'Jan  4 10.*username.*cur'
+Keresés a mentésben:    duplicity list-current-files
+                        rsync://username:password@192.168.x.x::/backup/folder
+                        | egrep 'Jan  4 10.*username.*cur'
 
-Visszaállítás:          duplicity --no-encryption -t 1D --file-to-restore var/vmail/foldername/user.name/Maildir/.user/cur/1451900101.M380766P46633.zentyal,S=521444,W=528340:2,Sabc username:password@192.168.x.x::/backup/folder /home/foldername/test.txt
+Visszaállítás:          duplicity --no-encryption -t 1D --file-to-restore var/vmail/foldername/
+                        user.name/Maildir/.user/cur/1451900101.M380766P46633.zentyal,S=521444,
+                        W=528340:2,Sabc username:password@192.168.x.x::/backup/folder /home/
+                        foldername/test.txt
 
 Viszaállított levél:    head -50 /var/vmail/foldername/username/Maildir/.Sent/cur/1451900079.M690485P26762.zentyal\,S\=14302283\,W\=14498365\:2\,S
 
