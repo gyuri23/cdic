@@ -3,10 +3,7 @@
 # cdic.py
 # 1.0 - 2016.10.18
 #
-# Module to read/write Microsoft OLE2 files (also called Structured Storage or
-# Microsoft Compound Document File Format), such as Microsoft Office 97-2003
-# documents, Image Composer and FlashPix files, Outlook messages, ...
-# This version is compatible with Python 2.6+ and 3.x
+# Description
 
 import argparse
 import codecs
