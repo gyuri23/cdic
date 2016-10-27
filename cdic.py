@@ -8,7 +8,11 @@
 # documents, Image Composer and FlashPix files, Outlook messages, ...
 # This version is compatible with Python 2.6+ and 3.x
 
-import argparse, codecs, sys, re, time
+import argparse
+import codecs
+import sys
+import re
+import time
 
 start_time = time.time()
 record_number = 0
