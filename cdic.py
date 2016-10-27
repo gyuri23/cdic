@@ -48,8 +48,8 @@ def print_progress(iteration, total, prefix='', suffix='', decimals=1,
     #     barLength   - Optional  : character length of bar (Int)
     formatStr = "{0:." + str(decimals) + "f}"
     percents = formatStr.format(100 * (iteration / float(total)))
-    filledLength = int(round(bar_length * iteration / float(total)))
-    bar = '=' * filledLength + '-' * (bar_length - filledLength)
+    filled_length = int(round(bar_length * iteration / float(total)))
+    bar = '=' * filled_length + '-' * (bar_length - filled_length)
     sys.stdout.write(
         '\r%s |%s| %s%s %s' % (prefix, bar, percents, '%', suffix)),
     if iteration == total:
