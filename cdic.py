@@ -32,7 +32,7 @@ args = parser.parse_args()
 
 # ========================= Függvények definiálása ============================
 
-# ----------------------------- Progress Bar -----------------------------------
+# ----------------------------- Progress Bar ----------------------------------
 
 # Print iterations progress
 def print_progress(iteration, total, prefix='', suffix='', decimals=1,
@@ -46,8 +46,8 @@ def print_progress(iteration, total, prefix='', suffix='', decimals=1,
     #     decimals    - Optional  : positive number of decimals in percent
     #                               complete (Int)
     #     barLength   - Optional  : character length of bar (Int)
-    formatStr = "{0:." + str(decimals) + "f}"
-    percents = formatStr.format(100 * (iteration / float(total)))
+    format_str = "{0:." + str(decimals) + "f}"
+    percents = format_str.format(100 * (iteration / float(total)))
     filled_length = int(round(bar_length * iteration / float(total)))
     bar = '=' * filled_length + '-' * (bar_length - filled_length)
     sys.stdout.write(
@@ -91,8 +91,8 @@ def extend_word(record, repeat):
         # Ha nem csak 1 karaktert akarunk a szavakhoz fűzni akkor újra
         # meghívjuk magát a extend_word függvényt. Ettől rekurzív :)
         if repeat > 1:
-            # Átadjuk a write_record függvénynek az aktuális szót és csökkentjük
-            # egyel az ismétlés számot. 
+            # Átadjuk a write_record függvénynek az aktuális szót és
+            # csökkentjük egyel az ismétlés számot.
             extend_word(write_record, repeat - 1)
 
 
@@ -176,7 +176,7 @@ for line in file_source:
 file_source.close()
 file_destination.close()
 
-# =============================== Statisztikák  ================================
+# =============================== Statisztikák  ===============================
 
 print("Record number: {0:,d}".format(record_number))
 seconds = time.time() - start_time
