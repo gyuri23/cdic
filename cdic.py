@@ -179,6 +179,11 @@ file_destination.close()
 # =============================== Statisztikák  ===============================
 
 print("Record number: {0:,d}".format(record_number))
-seconds = time.time() - start_time
-print("Running time (H:M:S): " + str(int(seconds / 3600)) + ":" +
-      str(int(seconds / 60)) + ":" + str(int(seconds)))
+
+elapsed_time = time.time() - start_time
+hours = int(elapsed_time // 3600)
+minutes = int(elapsed_time // 60 - hours * 60)
+seconds = int(elapsed_time - hours * 3600 - minutes * 60)
+
+print("Running time (H:M:S): " + str(hours) + ':' + str(minutes) + ':' +
+      str(seconds))
