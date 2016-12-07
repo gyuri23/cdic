@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # cdic.py
-# 1.0 - 2016.10.18
+# 1.0 - 2016.12.07
 #
 # Description
 
@@ -77,6 +77,8 @@ def extend_word(record, repeat):
     global file_destination
     # Kiírt rekordok számolásához változó.
     global record_number
+    # Kiírja magát a megkapott rekordot is üres, hogy bővítse a megadott fájlt.
+    file_destination.write(record + "\r\n")
     # Ciklus ami végigpörgeti a hozzáírni kívánt karaktektereket
     for index in range(len(extended_chars)):
         # Elkészíti a kiíráshoz az aktuális elemet (szót) úgy hogy a szó
