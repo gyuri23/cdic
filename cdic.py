@@ -77,8 +77,6 @@ def extend_word(record, repeat):
     global file_destination
     # Kiírt rekordok számolásához változó.
     global record_number
-    # Kiírja magát a megkapott rekordot is üres, hogy bővítse a megadott fájlt.
-    file_destination.write(record + "\r\n")
     # Ciklus ami végigpörgeti a hozzáírni kívánt karaktektereket
     for index in range(len(extended_chars)):
         # Elkészíti a kiíráshoz az aktuális elemet (szót) úgy hogy a szó
@@ -165,6 +163,8 @@ print_progress(progress_counter, total_line, prefix='Progress:',
                suffix='Complete', bar_length=50)
 # Forrás input fájl végigolvasása soronként. A soremelesét levágjuk a végéről.
 for line in file_source:
+    # Kiírja magát a megkapott rekordot is üres, hogy bővítse a megadott fájlt.
+    file_destination.write(line.rstrip("\n") + "\r\n")
     # Aktuális sor (szó) átadása a kiíráshoz. A meghívott függvény fogja
     # rekurzívan hozzáírni a beállított karakterket.
     extend_word(line.rstrip("\n"), depth)
